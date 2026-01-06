@@ -14,12 +14,10 @@ app.post('/voice', (req, res) => {
   
   // Respond with TwiML for the next question
   res.type('text/xml');
-  res.send(`
-    <?xml version="1.0" encoding="UTF-8"?>
-    <Response>
-      <Say>Got it. What type of vehicle is it?</Say>
-    </Response>
-  `);
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say>Got it. What type of vehicle is it?</Say>
+</Response>`);
 });
 
 app.listen(port, () => {
